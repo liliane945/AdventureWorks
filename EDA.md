@@ -30,7 +30,7 @@ ORDER BY TotalPurchase DESC;
 ![image](https://github.com/user-attachments/assets/bd281a59-fdaa-4969-a9fe-df1320ad355c)
 
 
-````Question 3: Find the average purchase for each customer
+~~~~Question 3: Find the average purchase for each customer
 
 SELECT 
   CONCAT(C.FirstName, ' ', C.LastName) FullName,
@@ -38,6 +38,9 @@ SELECT
 FROM FactInternetSales S
 	JOIN DimCustomer C
 		ON S.CustomerKey = C.CustomerKey
-GROUP BY CONCAT(C.FirstName, ' ', C.LastName);
-````
+GROUP BY CONCAT(C.FirstName, ' ', C.LastName);~~~~
+
+
+
+
 
