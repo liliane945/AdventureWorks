@@ -55,7 +55,6 @@ FROM FactInternetSales FS
 		ON DP.ProductKey = FS.ProductKey
 GROUP BY DP.ProductKey;
 ````
-
 ![image](https://github.com/user-attachments/assets/b370e404-492b-40da-8693-000927722c7b)
 
 
@@ -69,7 +68,6 @@ SELECT
 FROM [dbo].[FactInternetSales]
 GROUP BY SalesTerritoryKey;
 ````
-
 ![image](https://github.com/user-attachments/assets/10191c9b-8c2e-468c-8ab1-98778be397bf)
 
 
@@ -83,7 +81,6 @@ SELECT
 FROM FactInternetSales 
 GROUP BY YEAR(OrderDate)
 ````
-
 ![image](https://github.com/user-attachments/assets/41595912-6bcc-47ba-906a-ccee443c881b)
 
 
@@ -97,7 +94,6 @@ SELECT
 FROM [dbo].[FactInternetSales]
 GROUP BY YEAR(OrderDate);
 ````
-
 ![image](https://github.com/user-attachments/assets/f5cd8aae-0068-4faf-88cc-c728cd60cc40)
 
 
@@ -114,7 +110,6 @@ FROM  FactInternetSales SF
 GROUP BY DP.EnglishProductName
 ORDER BY TotalSalesAmount DESC;
 ````
-
 ![image](https://github.com/user-attachments/assets/734be042-eadf-4d54-8a45-34c39bf5808c)
 
 
@@ -129,7 +124,6 @@ SELECT
 FROM [dbo].[DimEmployee]
 GROUP BY Title;
 ````
-
 ![image](https://github.com/user-attachments/assets/c58a4be0-7729-4fff-a589-c8f174580084)
 
 
@@ -144,14 +138,12 @@ SELECT
 FROM [dbo].[DimProduct]
 GROUP BY Color;
 ````
-
 ![image](https://github.com/user-attachments/assets/03ce332b-f5a3-4abe-98e1-5bab7a77d5a1)
 
 
 ### Question 11: Find the top 10 Customers with the highest number of orders
 
 ````sql
-
 
 SELECT TOP 10
 	CONCAT(C.FirstName, ' ', C.LastName) FullName,
@@ -162,7 +154,6 @@ FROM FactInternetSales SF
 GROUP BY CONCAT(C.FirstName, ' ', C.LastName)
 ORDER BY TotalOrders DESC;
 ````
-
 ![image](https://github.com/user-attachments/assets/e55e237a-41d4-4840-b5e6-665df18be208)
 
 
@@ -180,7 +171,6 @@ FROM DimProduct P
 GROUP BY P. ProductSubcategoryKey
 ORDER BY 2 DESC;
 ````
-
 ![image](https://github.com/user-attachments/assets/ee2a675f-f14b-4016-8aeb-564014c08c8c)
 
 
@@ -201,5 +191,4 @@ FROM FactInternetSales SF
 ORDER BY ProfitMargin DESC;
 
 ````
-
 ![image](https://github.com/user-attachments/assets/637d12d8-1b46-456f-ab68-f45a0800adcf)
